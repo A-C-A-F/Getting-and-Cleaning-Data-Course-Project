@@ -1,26 +1,33 @@
 # Getting-and-Cleaning-Data-Course-Project
 Data Science Specialization - Getting and Cleaning Data Course Project. 
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
+The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set. The repository here is my submission for the course project stated above.
 
-One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
-
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-
-Here are the data for the project:
-
- https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
-
-You should create one R script called run_analysis.R that does the following. 
-
-Merges the training and the test sets to create one data set.
-
-Extracts only the measurements on the mean and standard deviation for each measurement. 
-
-Uses descriptive activity names to name the activities in the data set
-
-Appropriately labels the data set with descriptive variable names. 
-
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+# Here are the data for the project:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 Repository of codes for this project are detailed in the run_analysis.R script.
+
+# About the R script
+The run_analysis.R script shows the detailed process of the following analysis steps I've conducted for this project. I used RStudio as my IDE for R.
+
+## FIRST Phase
+In this phase, i have performed the following tasks:
+- Prepare the R package by installing and loading the "dplyr".
+- Then I downloaded and stored in my local machine the dataset from the link provided above.
+- After downloading, I have read the file and renamed some of the columns that I will be conducting analysis in the later part of this project.
+
+## SECOND Phase
+This is the analysis phase where I performed following steps and procedure as provided in this project:
+### Step 1: Merges the training and the test sets to create one data set.
+In this step, I have merged all the datasets after assigning variables to each.
+### Step 2: Extracts only the measurements on the mean and standard deviation for each measurement.
+I created a variable "mean_and_std" to perform the necessary action in this step.
+### Step 3: Uses descriptive activity names to name the activities in the data set.
+### Step 4: Appropriately labels the data set with descriptive variable names.
+Although I have performed this already in the first phase, I decided to rename some of the abbreviated description of the variable names to make it easier to read.
+### Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+In this step, I created the variable "Tidy_dataset" as my second independent tidy data set.
+
+## FINAL Phase
+In this phase, I used the function write.table() to write and save my second indepent dataset as .txt file.
